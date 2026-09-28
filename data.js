@@ -5,35 +5,35 @@
 const portfolio = {
     // Personal information object
     owner: {
-        name: "Your Name Here",        // TODO: Add your name
-        title: "Your Title Here",      // TODO: Add your professional title
-        email: "your.email@example.com", // TODO: Add your email
-        location: "Your City, State",  // TODO: Add your location
-        bio: "Write a brief description about yourself here. What are you passionate about? What are your goals?" // TODO: Add your bio
+        name: "Mackenzie",        // TODO: Add your name
+        title: "MIMS Student",      // TODO: Add your professional title
+        email: "mackenzie.hanh@berkeley.edu", // TODO: Add your email
+        location: "San Francisco, CA",  // TODO: Add your location
+        bio: "I hope to be employed. I am passionate about ethical and meaningful data analysis." // TODO: Add your bio
     },
     
     // Skills as an array
     skills: [
-        "Add your first skill here",   // TODO: Replace with your actual skills
-        "Add your second skill here",  // TODO: Add more skills
-        "Add your third skill here"    // TODO: Students should have at least 5 skills
+        "Python",   // TODO: Replace with your actual skills
+        "Data analytics",  // TODO: Add more skills
+        "Data science"    // TODO: Students should have at least 5 skills
         // TODO: Add more skills - aim for 5-7 skills total
     ],
     
     // Projects as array of objects
     projects: [
         {
-            title: "Your First Project",
-            description: "Describe what this project does and why it's interesting",
-            technologies: ["HTML", "CSS"], // Array of technologies used
-            completionDate: "2025-08-15",   // When you completed it
+            title: "Measuring People's Body Parts in Novels",
+            description: "Honors Thesis",
+            technologies: ["Python"], // Array of technologies used
+            completionDate: "2024-12-15",   // When you completed it
             featured: true                   // Is this a featured project?
         },
         {
-            title: "Your Second Project", 
-            description: "Another project description here",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            completionDate: "2025-09-01",
+            title: "Narrativity in Song Lyrics", 
+            description: "Research paper",
+            technologies: ["Annotating"],
+            completionDate: "2026-12-01",
             featured: false
         }
         // TODO: Add more projects during class
@@ -53,6 +53,27 @@ console.log("Full portfolio object:", portfolio);
 
 // TODO: During class, we'll add more console.log() statements to explore the data
 // Examples students will try:
+
+console.log("My name:", portfolio.owner.name);
+console.log("Total skills:", portfolio.skills.length);
+console.log("First project:", portfolio.projects[0]);
+
+// Create summary statistics
+console.log("Portfolio Summary:");
+console.log(`${portfolio.owner.name} has ${portfolio.skills.length} skills`);
+console.log(`and ${portfolio.projects.length} projects`);
+
+// Find featured projects
+for (let i = 0; i < portfolio.projects.length; i++) {
+    if (portfolio.projects[i].featured === true) {
+        console.log("⭐ Featured:", portfolio.projects[i].title);
+    }
+}
+
+// Convert to JSON for storage/debugging
+let dataAsJSON = JSON.stringify(portfolio, null, 2);
+console.log("Portfolio as JSON:", dataAsJSON);
+
 // console.log("Owner name:", portfolio.owner.name);
 // console.log("First skill:", portfolio.skills[0]);
 // console.log("Number of projects:", portfolio.projects.length);
